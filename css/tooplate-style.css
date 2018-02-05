@@ -73,6 +73,14 @@ a:focus {
 		opacity: 0.8;
 		width: 100%;
 		margin: 0px;
+}	
+
+.tm-bg-white4 {
+		padding: 20px;
+		background-color: white;
+		opacity: 0.8;
+		width: 100%;
+		margin: 0px;
 }
 
 h1 {
