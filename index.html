@@ -102,6 +102,66 @@
             </div>
           </div>
         </div>
+
+      
+
+
+          <!-- load JS files -->
+          <script src="js/jquery-1.11.3.min.js"></script>        <!-- jQuery (https://jquery.com/download/) -->
+          <script src="js/parallax.min.js"></script>
+     
+          <script type="text/javascript" src="slick/slick.min.js"></script> 
+          <!-- Slick Carousel -->
+
+          <!-- Magnific Popup core JS file -->
+          <script src="js/jquery.magnific-popup.min.js"></script>
+          
+
+          <script>
+
+            function setCarousel() {
+
+              var slider = $('.tm-img-slider');
+
+              if (slider.hasClass('slick-initialized')) {
+                slider.slick('destroy');
+              }
+
+              if($(window).width() > 991){
+                  // Slick carousel
+                  slider.slick({
+                    dots: true,
+                    infinite: true,
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                  });
+                }
+                else {
+                 slider.slick({
+                  dots: true,
+                  infinite: true,
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+                });
+               }
+             }
+
+             $(document).ready(function(){
+
+              setCarousel();
+              $('.tm-img-slider').magnificPopup({
+                delegate: 'a', // child items selector, by clicking on it popup will open
+                type: 'image'
+                // other options
+
+              });
+
+              $(window).resize(function() {
+                setCarousel();
+              });
+            });
+
+          </script>
         </body>
         </html>
 <!--UPDATE-->
